@@ -19,14 +19,15 @@ startBtn.addEventListener("click", ()=>{
 
 paybtn.addEventListener("click",()=>{
     if(input.value==""){
-        reject("Enter your name or number");
+        alert("Enter your name or number");
     }
     else if(amount.value == ""){
         alert("Enter Amount");
     }
     else if(input.value.length!=10){
-        reject("Enter your correct name or number");
+        alert("Enter your correct name or number");
     }
+
     let mypromise=new Promise((resolve,reject)=>{
         setTimeout(() => {
             if(input.value.length==10){
@@ -51,9 +52,8 @@ paybtn.addEventListener("click",()=>{
     <p class = transaction_id>Transaction ID: <span class="id">${
       Math.floor(Math.random() * 90000000) + "@ybpl"
     }</span></p>
-    <h2>Paid to: <span class="name_person">${input.value}</span></h2>
-    <button class = "Pay_btnn">Re Payment</button>`
-    
+    <h2>Paid to: <span class="name_person">${input.value}</span></h2>`
+    // <button class = "Pay_btnn">Re Payment</button>
     
    })
    .catch((mssg)=>{
